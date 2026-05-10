@@ -9,7 +9,7 @@ cover: https://cdn.hashnode.com/uploads/covers/69eca9c717d72fa4cd7ffbad/7b592924
 
 # Task Requirement
 
-### #week\_Thirteen&Fourteen - Higly available Application & Database deployment utilizing CircleCI
+#week\_Thirteen&Fourteen - Higly available Application & Database deployment utilizing CircleCI
 
 ### CI/CD & Terraform IaC
 
@@ -61,7 +61,7 @@ Consider the below requirements specifications.
 3.  Crafting multiple HCP workspaces.
     
 
-![](../.gitbook/assets/image (61).png align="center")
+!\[\](../.gitbook/assets/image (61).png align="center")
 
 ## Architecture
 
@@ -1045,7 +1045,7 @@ Created ASG Service and attach it to VPC 1 as Required.
 
 Connected to Bastion host and pinged one server from VPC 1
 
-![](../.gitbook/assets/image (77).png align="center")
+!\[\](../.gitbook/assets/image (77).png align="center")
 
 ![](https://cdn.hashnode.com/uploads/covers/69eca9c717d72fa4cd7ffbad/ddfdfabd-2d72-4796-bb7b-741638e042b2.png align="center")
 
@@ -1053,7 +1053,7 @@ Connected to one server in VPC 1 from Bastion host
 
 ![](https://cdn.hashnode.com/uploads/covers/69eca9c717d72fa4cd7ffbad/3c02fce0-2588-4b72-b589-a1ac4054bcb5.png align="center")
 
-![](../.gitbook/assets/image (1).png align="center")
+!\[\](../.gitbook/assets/image (1).png align="center")
 
 and Finally internal Load Balancer can be accessed through nginx proxy and Public Application Load balancer.
 
