@@ -3,7 +3,7 @@ title: "AWS Transit Gateway Deep Dive: Building a Centralized Network Hub for Mu
 datePublished: 2026-05-05T16:04:02.231Z
 cuid: cmostj60l00ef2flraosk0vdg
 slug: aws-transit-gateway-deep-dive-building-a-centralized-network-hub-for-multi-vpc-and-hybrid-connectivity
-cover: https://cdn.hashnode.com/uploads/covers/69eca9c717d72fa4cd7ffbad/d82d1dba-ab07-4e9d-a2b2-bda98df5238b.png
+cover: https://cdn.hashnode.com/uploads/covers/69eca9c717d72fa4cd7ffbad/beeec066-e3a8-4361-bf15-866b11890b28.png
 
 ---
 
