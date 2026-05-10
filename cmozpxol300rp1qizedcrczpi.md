@@ -9,9 +9,7 @@ cover: https://cdn.hashnode.com/uploads/covers/69eca9c717d72fa4cd7ffbad/7b592924
 
 # Task Requirement
 
-#week\_Thirteen&Fourteen - Higly available Application & Database deployment utilizing CircleCI
-
-**CI/CD & Terraform IaC**
+#week\_Thirteen&Fourteen - Higly available Application & Database deployment utilizing CircleCI CI/CD & Terraform IaC
 
 ***duration: 2 weeks***
 
