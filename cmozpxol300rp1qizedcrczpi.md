@@ -11,7 +11,7 @@ cover: https://cdn.hashnode.com/uploads/covers/69eca9c717d72fa4cd7ffbad/7b592924
 
 #week\_Thirteen&Fourteen - Higly available Application & Database deployment utilizing CircleCI
 
-### CI/CD & Terraform IaC
+**CI/CD & Terraform IaC**
 
 ***duration: 2 weeks***
 
@@ -49,8 +49,12 @@ Consider the below requirements specifications.
     
 3.  Resources must have common tags combination as below:
     
-4.  Common tags: a. Key: “Environment”, Value: “terraformChamps” b. Key: “Owner”, Value: <“Your\_first\_name“>
+4.  Common tags:
     
+    *   Key: “Environment”, Value: “terraformChamps”
+        
+    *   Key: “Owner”, Value: <“Your\_first\_name“>
+        
 
 **Bonus**
 
@@ -60,8 +64,6 @@ Consider the below requirements specifications.
     
 3.  Crafting multiple HCP workspaces.
     
-
-!\[\](../.gitbook/assets/image (61).png align="center")
 
 ## Architecture
 
@@ -557,11 +559,11 @@ Created Two Route Table for VPC 3, first one Public RTB that routes for 3 things
 3.  Routes to VPC 2 through Transit GW
     
 
-{% hint style="success" %} now we Created public rtb in vpc 3 that accept traffic from internet and vpc 1 & 2, we will use IGW to get info from internet by NAT {% endhint %}
+> now we Created public rtb in vpc 3 that accept traffic from internet and vpc 1 & 2, we will use IGW to get info from internet by NAT
 
 then associate public subnet to the public RTB, second one Private RTB that routes only for NAT GW, then associate private subnet to the private RTB.
 
-{% hint style="success" %} So now we Created private rtb in vpc 3 that take any traffic and pass it to NAT GW in public subnet {% endhint %}
+> So now we Created private rtb in vpc 3 that take any traffic and pass it to NAT GW in public subnet
 
 Created Transit GW Route table.
 
@@ -573,7 +575,7 @@ created route to VPC 1, by adding VPC 3 CIDER block and transit GW Table ID and 
 
 created route\_to\_vpc\_3\_pub\_sub and adding CIDR "0.0.0.0/0" and the expected gate of VPC 3 ID.
 
-{% hint style="danger" %} This route essentially handles all **other traffic** that might need to go outside VPC 3. {% endhint %}
+> This route essentially handles all **other traffic** that might need to go outside VPC 3.
 
 ### Security Group Resource Deployment
 
@@ -718,7 +720,7 @@ Created Security group for VPC 3,
 *   egress rule: Allowed all traffic to go our.
     
 
-{% hint style="info" %} SSH allowed so i can connect to any EC2 in every VPC. {% endhint %}
+> SSH allowed so i can connect to any EC2 in every VPC.
 
 ### EC2 Resource Deployment
 
@@ -1027,7 +1029,7 @@ Created template so i can use it in multiple EC2 that the ASG Service will creat
 
 Created ASG Service and attach it to VPC 1 as Required.
 
-{% hint style="danger" %} Using Ignore\_changes to tell terraform to ingore any manual changes, its useful because some times you need to change things manually so when you make terraform apply it can be reconfigure. {% endhint %}
+> Using Ignore\_changes to tell terraform to ingore any manual changes, its useful because some times you need to change things manually so when you make terraform apply it can be reconfigure. {% endhint %}
 
 ## After terraform apply
 
@@ -1045,15 +1047,11 @@ Created ASG Service and attach it to VPC 1 as Required.
 
 Connected to Bastion host and pinged one server from VPC 1
 
-!\[\](../.gitbook/assets/image (77).png align="center")
-
 ![](https://cdn.hashnode.com/uploads/covers/69eca9c717d72fa4cd7ffbad/ddfdfabd-2d72-4796-bb7b-741638e042b2.png align="center")
 
 Connected to one server in VPC 1 from Bastion host
 
 ![](https://cdn.hashnode.com/uploads/covers/69eca9c717d72fa4cd7ffbad/3c02fce0-2588-4b72-b589-a1ac4054bcb5.png align="center")
-
-!\[\](../.gitbook/assets/image (1).png align="center")
 
 and Finally internal Load Balancer can be accessed through nginx proxy and Public Application Load balancer.
 
