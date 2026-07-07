@@ -9,7 +9,7 @@ cover: https://cdn.hashnode.com/uploads/covers/69eca9c717d72fa4cd7ffbad/eea6b10d
 
 ## What is CircleCI
 
-CircleCI is a **CI/CD (Continuous Integration/Continuous Deployment)** <mark class="bg-yellow-200 dark:bg-yellow-500/30">platform that automates the process of building, testing</mark>, and deploying software applications. It helps developers integrate code frequently, ensuring that new code works seamlessly with existing code, while also enabling fast and reliable application delivery, while its primary purpose is to automate **building** and **testing** applications, it also supports **deployment** as part of its pipelines.
+CircleCI is a **CI/CD (Continuous Integration/Continuous Deployment)** **platform that automates the process of building, testing**, and deploying software applications. It helps developers integrate code frequently, ensuring that new code works seamlessly with existing code, while also enabling fast and reliable application delivery, while its primary purpose is to automate **building** and **testing** applications, it also supports **deployment** as part of its pipelines.
 
 * * *
 
@@ -50,13 +50,13 @@ CircleCI is a **CI/CD (Continuous Integration/Continuous Deployment)** <mark cla
 
 ## CircleCI configuration
 
-*   [**Pipeline**](circleci.md#pipeline): Represents the <mark class="bg-yellow-200 dark:bg-yellow-500/30">entirety of your configuration</mark>.
+*   [**Pipeline**](circleci.md#pipeline): Represents the **entirety of your configuration**.
     
-*   [**Workflows**](circleci.md#workflows): Responsible for <mark class="bg-yellow-200 dark:bg-yellow-500/30">orchestrating</mark> multiple *jobs*.
+*   [**Workflows**](circleci.md#workflows): Responsible for **orchestrating** multiple *jobs*.
     
-*   [**Jobs**](circleci.md#jobs): Responsible for running a <mark class="bg-yellow-200 dark:bg-yellow-500/30">series of</mark> *<mark class="bg-yellow-200 dark:bg-yellow-500/30">steps</mark>* that perform commands.
+*   [**Jobs**](circleci.md#jobs): Responsible for running a **series of *steps*** that perform commands.
     
-*   [**Steps**](circleci.md#steps): <mark class="bg-yellow-200 dark:bg-yellow-500/30">Run commands and shell scripts</mark> to do the work required for your project.
+*   [**Steps**](circleci.md#steps): **Run commands and shell scripts** to do the work required for your project.
     
 
 * * *
@@ -69,7 +69,7 @@ Pipeline is the whole process of workflows, We could say it is the entire YAML f
 
 ### Workflows
 
-Workflows responsible for <mark class="bg-yellow-200 dark:bg-yellow-500/30">orchestrating </mark> jobs,A workflow defines the order in which jobs run.
+Workflows responsible for **orchestrating** jobs,A workflow defines the order in which jobs run.
 
 ![Workflow](https://cdn.hashnode.com/uploads/covers/69eca9c717d72fa4cd7ffbad/38e83f90-295f-4c2f-9fd6-d51a270e0c5e.png align="center")
 
@@ -77,7 +77,7 @@ Workflows responsible for <mark class="bg-yellow-200 dark:bg-yellow-500/30">orch
 
 ##### 1\. Sequential job execution
 
-In this type, your just <mark class="bg-yellow-200 dark:bg-yellow-500/30">lists correct order of jobs</mark>
+In this type, your just **lists correct order of jobs**
 
 ```yaml
 workflows:
@@ -101,7 +101,7 @@ workflows:
 
 ##### 2\. Fan-out/fan-in workflow
 
-in this type you run multiple jobs in <mark class="bg-yellow-200 dark:bg-yellow-500/30">parallel</mark> if specific jobs successes.
+in this type you run multiple jobs in **parallel** if specific jobs successes.
 
 ```yaml
 workflows:
@@ -160,7 +160,7 @@ workflows:
 
 ### Jobs
 
-Jobs are the building blocks of your configuration. Jobs are <mark class="bg-yellow-200 dark:bg-yellow-500/30">collections of steps</mark>, which runs executable commands/scripts, in Each job you must declare an executer that is either a docker or machine (Linux, windows, macOS)
+Jobs are the building blocks of your configuration. Jobs are **collections of steps**, which runs executable commands/scripts, in Each job you must declare an executer that is either a docker or machine (Linux, windows, macOS)
 
 ![Job Format](https://cdn.hashnode.com/uploads/covers/69eca9c717d72fa4cd7ffbad/54564f68-bfa1-45f2-8ba8-f421608f6384.png align="center")
 
@@ -177,7 +177,7 @@ Jobs are the building blocks of your configuration. Jobs are <mark class="bg-yel
 
 ### Steps
 
-A Collection of <mark class="bg-yellow-200 dark:bg-yellow-500/30">executable commands</mark> required to complete your job
+A Collection of **executable commands** required to complete your job
 
 ```yaml
 version: 2.1
@@ -203,7 +203,7 @@ like in this Code we have `Checkout` it's first step that get your src code then
 
 #### Parallelism
 
-If you have Specific job with multiple task take time to execute you can use parallelism so you can <mark class="bg-yellow-200 dark:bg-yellow-500/30">use more than one executer to run it in different machine or image in parallel</mark>
+If you have Specific job with multiple task take time to execute you can use parallelism so you can **use more than one executer to run it in different machine or image in parallel**
 
 ```yaml
 jobs:
@@ -216,7 +216,7 @@ jobs:
       - run: go list ./... | circleci tests run --command "xargs gotestsum --junitfile junit.xml --format testname --" --split-by=timings --timings-type=name
 ```
 
-A `resource class` is a configuration option that allows you to <mark class="bg-yellow-200 dark:bg-yellow-500/30">control available compute resources</mark> (CPU and RAM) for your jobs. When you specify an execution environment for a job, a default resource class value for the environment will be set, *unless* you define the resource class in your configuration. It is best practice to define the resource class, as opposed to relying on a default.
+A `resource class` is a configuration option that allows you to **control available compute resources** (CPU and RAM) for your jobs. When you specify an execution environment for a job, a default resource class value for the environment will be set, *unless* you define the resource class in your configuration. It is best practice to define the resource class, as opposed to relying on a default.
 
 ## Reference
 
