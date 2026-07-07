@@ -134,7 +134,7 @@ workflows:
 
 ##### 3\. Hold a workflow for a manual approve
 
-an approval job to configure a workflow to <mark class="bg-yellow-200 dark:bg-yellow-500/30">wait for a manual approval</mark>
+an approval job to configure a workflow to **wait for a manual approval**
 
 ```yaml
 workflows:
@@ -152,7 +152,7 @@ workflows:
             - hold
 ```
 
-<mark class="bg-yellow-200 dark:bg-yellow-500/30">note: you could name Approval job to (hold, pause, and wait)</mark>
+> Note: you could name Approval job to (hold, pause, and wait)
 
 ![Approval Job](https://cdn.hashnode.com/uploads/covers/69eca9c717d72fa4cd7ffbad/f51f0d2e-e62e-4826-b4b8-b0b16a155eed.png align="center")
 
